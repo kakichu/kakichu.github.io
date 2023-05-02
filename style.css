@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Cheri Regular";
+  src: url(fonts/CHERI.TTF);
+}
+
+body {
+  background-color: #ffd4e0;
+}
+
+div.title {
+  width: 100vw;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.title h1.text {
+  font-family: "Cheri Regular", sans-serif;
+  font-size: 75px;
+  text-shadow: 20px 20px 2px #fcc0d1;
+  color: #7d5f4c;
+}
+
+div.title img {
+  padding-left: 25px;
+  height: 50%;
+}
