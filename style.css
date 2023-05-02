@@ -39,3 +39,7 @@ div.subtitle {
   font-size: 25px;
   color: #ff87a9;
 }
+
+div.yt-embed h1.text {
+  color: #ff5778;
+}
