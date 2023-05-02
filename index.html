@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div id="cat"></div>
     <div class="title">
       <img src="images/ornaments/my_melody.png" alt="" class="mm-img" />
       <h1 class="text">☆ kakichu's website ☆</h1>
@@ -18,14 +19,94 @@
       i don't know what this website is going to be about but enjoy the overuse
       of pink and my boyfriend's hardwork (´ ∀ ` *)
     </div>
-    <div class="yt-embed">
-      <h1 class="text">my boys!!! ↓</h1>
-      <iframe
-        src="https://www.youtube.com/embed/-GQg25oP0S4"
-        width="420"
-        height="315"
-        class="embed"
-      ></iframe>
+    <div class="test">
+      <div class="yt-embed">
+        <h1 class="text">my boys!!! ↓</h1>
+        <iframe
+          src="https://www.youtube.com/embed/-GQg25oP0S4"
+          width="420"
+          height="315"
+          class="embed"
+        ></iframe>
+      </div>
+      <div class="my-cats">
+        <h1 class="text">introduction to my cats (=^･ω･^=)</h1>
+        <img src="images/stuff/my_cats.png" alt="" />
+      </div>
     </div>
   </body>
+
+  <script>
+    function moveLeft(elt) {
+      elt.style.left = elt.offsetLeft - elt.clientWidth + "px";
+    }
+
+    function moveRight(elt) {
+      elt.style.left = elt.offsetLeft + elt.clientWidth + "px";
+    }
+
+    function moveDown(elt) {
+      elt.style.top = elt.offsetTop + elt.clientHeight + "px";
+    }
+
+    function moveUp(elt) {
+      elt.style.top = elt.offsetTop - elt.clientHeight + "px";
+    }
+
+    document.getElementById("cat").onmouseover = function (e) {
+      var pageLeft = this.offsetLeft;
+      var pageTop = this.offsetTop;
+      var pageRight = window.innerWidth - this.offsetLeft - this.clientWidth;
+      var pageBottom = window.innerHeight - this.offsetTop - this.clientHeight;
+
+      var xCatCursor = e.pageX - pageLeft;
+      var yCatCursor = e.pageY - pageTop;
+
+      // Mouse came from top
+      if (
+        xCatCursor >= yCatCursor &&
+        xCatCursor < this.clientHeight - yCatCursor
+      ) {
+        // Can go down
+        if (pageBottom >= this.clientHeight) {
+          moveDown(this);
+        } else {
+          moveUp(this);
+        }
+      }
+      // Mouse came from left
+      else if (
+        yCatCursor >= xCatCursor &&
+        xCatCursor < this.clientHeight - yCatCursor
+      ) {
+        // Can go right
+        if (pageRight >= this.clientWidth) {
+          moveRight(this);
+        } else {
+          moveLeft(this);
+        }
+      }
+      // Mouse came from bottom
+      else if (
+        yCatCursor >= xCatCursor &&
+        xCatCursor >= this.clientHeight - yCatCursor
+      ) {
+        // Can go up
+        if (pageTop >= this.clientHeight) {
+          moveUp(this);
+        } else {
+          moveDown(this);
+        }
+      }
+      // Mouse came from right
+      else {
+        // Can go left
+        if (pageLeft >= this.clientWidth) {
+          moveLeft(this);
+        } else {
+          moveRight(this);
+        }
+      }
+    };
+  </script>
 </html>

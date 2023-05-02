@@ -40,6 +40,35 @@ div.subtitle {
   color: #ff87a9;
 }
 
-div.yt-embed h1.text {
+div.test {
+  display: flex;
+}
+
+div.yt-embed {
+  width: 50vw;
+}
+
+div.my-cats {
+  width: 50vw;
+  justify-content: right;
+}
+
+div.my-cats img {
+  height: 500px;
+}
+
+div.yt-embed h1.text,
+div.my-cats h1.text {
   color: #ff5778;
+}
+
+#cat {
+  width: 60px;
+  height: 60px;
+  background-image: url(https://25.media.tumblr.com/11c0e3102a51c848f61976df8280827c/tumblr_mib819Yg8s1s5jjtzo1_500.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
