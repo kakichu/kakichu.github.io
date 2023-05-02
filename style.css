@@ -7,6 +7,10 @@ body {
   background-color: #ffd4e0;
 }
 
+html {
+  cursor: url("images/cursors/cherry.png"), pointer;
+}
+
 div.title {
   width: 100vw;
   height: 250px;
