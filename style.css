@@ -48,6 +48,10 @@ div.yt-embed {
   width: 50vw;
 }
 
+div.yt-embed img {
+  width: 420px;
+}
+
 div.my-cats {
   width: 50vw;
   justify-content: right;
@@ -68,7 +72,7 @@ div.deco {
 }
 
 div.deco img {
-  width: 250px;
+  width: 125px;
 }
 
 #cat {
