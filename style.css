@@ -3,76 +3,97 @@
   src: url(fonts/CHERI.TTF);
 }
 
-body {
-  background-color: #ffd4e0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html {
   cursor: url("images/cursors/cherry.png"), pointer;
+  background-color: #ffd4e0;
 }
 
 div.title {
-  width: 100vw;
   height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -25px;
 }
-
 div.title h1.text {
+  color: #7d5f4c;
   font-family: "Cheri Regular", sans-serif;
   font-size: 75px;
   text-shadow: 20px 20px 2px #fcc0d1;
-  color: #7d5f4c;
 }
-
 div.title img {
-  padding-left: 25px;
   height: 50%;
+  margin: 0px 10px;
 }
 
 div.subtitle {
-  width: 100vw;
-  height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 50px;
   font-size: 25px;
   color: #ff87a9;
+  margin-bottom: 30px;
 }
 
-div.test {
+div.container {
   display: flex;
+  justify-content: center;
 }
 
-div.yt-embed {
-  width: 50vw;
-}
-
-div.yt-embed img {
+div.ytbox {
   width: 420px;
+  height: 340px;
 }
-
-div.my-cats {
-  width: 50vw;
-  justify-content: right;
-}
-
-div.my-cats img {
-  height: 500px;
-}
-
-div.yt-embed h1.text,
-div.my-cats h1.text {
-  color: #ff5778;
+div.ytbox iframe {
+  width: 100%;
+  height: 315px;
 }
 
 div.deco {
-  text-align: center;
-  margin-top: 50px;
+  width: 200px;
+  margin: 60px 0px 0px 20px;
+}
+div.deco img {
+  max-width: 100%;
+}
+div.deco img.timg {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  rotate: -15deg;
+}
+div.deco img.simg {
+  margin-left: 125px;
+}
+div.deco img.fimg {
+  margin-top: 35px;
+  rotate: 10deg;
 }
 
-div.deco img {
-  width: 125px;
+div.catsbox {
+  width: 500px;
+  margin-left: 110px;
+}
+div.catsbox img {
+  max-width: 100%;
+}
+
+div.ytbox h1.text,
+div.catsbox h1.text {
+  color: #ff5778;
+}
+
+div.pinterestlink {
+  width: 475px;
+}
+div.pinterestlink img {
+  max-width: 100%;
+  margin-top: 50px;
 }
 
 #cat {
@@ -84,4 +105,5 @@ div.deco img {
   position: absolute;
   top: 30px;
   left: 30px;
+  animation: myanimation 5s infinite;
 }

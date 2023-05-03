@@ -9,112 +9,55 @@
   </head>
 
   <body>
-    <div id="cat"></div>
-    <div class="title">
-      <img src="images/ornaments/my_melody.png" alt="" class="mm-img" />
-      <h1 class="text">☆ kakichu's website ☆</h1>
-      <img src="images/ornaments/strawberry.png" alt="" class="s-img" />
+    <div class="header">
+      <div class="title">
+        <img
+          src="images/ornaments/my_melody.png"
+          alt="my melody"
+          class="mmimg"
+        />
+        <h1 class="text">☆ kakichu's website ☆</h1>
+        <img
+          src="images/ornaments/strawberry.png"
+          alt="strawberry"
+          class="simg"
+        />
+      </div>
+
+      <div class="subtitle">
+        i don't know what this website is going to be about but enjoy the
+        overuse of pink and my boyfriend's hardwork (´ ∀ ` *)
+      </div>
     </div>
-    <div class="subtitle">
-      i don't know what this website is going to be about but enjoy the overuse
-      of pink and my boyfriend's hardwork (´ ∀ ` *)
-    </div>
-    <div class="test">
-      <div class="yt-embed">
+
+    <div class="container">
+      <div class="ytbox">
         <h1 class="text">my boys!!! ↓</h1>
         <iframe
           src="https://www.youtube.com/embed/-GQg25oP0S4"
-          width="420"
-          height="315"
-          class="embed"
+          frameborder="0"
         ></iframe>
-        <a href="https://www.pinterest.fr/Kakichuu/" target="_blank"
-          ><img src="images/stuff/pinterest_link.png" alt="" class="p-link"
-        /></a>
+        <div class="pinterestlink">
+          <a href="https://www.pinterest.fr/Kakichuu/" target="_blank"
+            ><img src="images/stuff/wanna_see_my_pinterest.png" alt="pinterest"
+          /></a>
+        </div>
       </div>
+
       <div class="deco">
-        <img src="images/ornaments/tulipes.png" alt="" />
-        <img src="images/ornaments/sparkles.png" alt="" />
-        <img src="images/ornaments/fish.png" alt="" />
+        <img src="images/ornaments/tulipes.png" alt="tulipes" class="timg" />
+        <img src="images/ornaments/sparkles.png" alt="sparkles" class="simg" />
+        <img src="images/ornaments/fish.png" alt="fish" class="fimg" />
       </div>
-      <div class="my-cats">
+
+      <div class="catsbox">
         <h1 class="text">introduction to my cats (=^･ω･^=)</h1>
-        <img src="images/stuff/my_cats.png" alt="" />
+        <img src="images/stuff/my_cats.png" alt="an image of my cats" />
       </div>
     </div>
+
+    <div id="cat"></div>
   </body>
 
-  <script>
-    function moveLeft(elt) {
-      elt.style.left = elt.offsetLeft - elt.clientWidth + "px";
-    }
-
-    function moveRight(elt) {
-      elt.style.left = elt.offsetLeft + elt.clientWidth + "px";
-    }
-
-    function moveDown(elt) {
-      elt.style.top = elt.offsetTop + elt.clientHeight + "px";
-    }
-
-    function moveUp(elt) {
-      elt.style.top = elt.offsetTop - elt.clientHeight + "px";
-    }
-
-    document.getElementById("cat").onmouseover = function (e) {
-      var pageLeft = this.offsetLeft;
-      var pageTop = this.offsetTop;
-      var pageRight = window.innerWidth - this.offsetLeft - this.clientWidth;
-      var pageBottom = window.innerHeight - this.offsetTop - this.clientHeight;
-
-      var xCatCursor = e.pageX - pageLeft;
-      var yCatCursor = e.pageY - pageTop;
-
-      // Mouse came from top
-      if (
-        xCatCursor >= yCatCursor &&
-        xCatCursor < this.clientHeight - yCatCursor
-      ) {
-        // Can go down
-        if (pageBottom >= this.clientHeight) {
-          moveDown(this);
-        } else {
-          moveUp(this);
-        }
-      }
-      // Mouse came from left
-      else if (
-        yCatCursor >= xCatCursor &&
-        xCatCursor < this.clientHeight - yCatCursor
-      ) {
-        // Can go right
-        if (pageRight >= this.clientWidth) {
-          moveRight(this);
-        } else {
-          moveLeft(this);
-        }
-      }
-      // Mouse came from bottom
-      else if (
-        yCatCursor >= xCatCursor &&
-        xCatCursor >= this.clientHeight - yCatCursor
-      ) {
-        // Can go up
-        if (pageTop >= this.clientHeight) {
-          moveUp(this);
-        } else {
-          moveDown(this);
-        }
-      }
-      // Mouse came from right
-      else {
-        // Can go left
-        if (pageLeft >= this.clientWidth) {
-          moveLeft(this);
-        } else {
-          moveRight(this);
-        }
-      }
-    };
-  </script>
+  <script src="script.js"></script>
 </html>
